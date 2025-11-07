@@ -185,7 +185,7 @@ class Alu:
             result = a >> b
         else:
             b %= 16
-            bit_out = a & 2 ** (WORD_SIZE - b) #TODO: change this to shift
+            bit_out = (a & 2 ** (WORD_SIZE - b)) >> 15
             result = a << b & WORD_MASK
 
 
